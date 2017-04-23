@@ -32,10 +32,8 @@ public class Film {
 
     private String movieOrShow;
 
-    @ManyToMany
     private String genre;
 
-    @ManyToMany
     private ArrayList<String> keywords;
 
     private int yearMade;
