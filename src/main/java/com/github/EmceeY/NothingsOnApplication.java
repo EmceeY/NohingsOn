@@ -1,7 +1,12 @@
 package com.github.EmceeY;
 
-/**
- * Created by User on 4/18/17.
- */
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class NothingsOnApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(NothingsOnApplication.class, args);
+    }
 }
