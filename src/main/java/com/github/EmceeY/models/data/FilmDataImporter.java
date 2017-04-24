@@ -51,7 +51,6 @@ public class FilmDataImporter {
                 String length = record.get("length");
                 int critRec = Integer.parseInt(record.get("critical reception")) ;
                 int audRec = Integer.parseInt(record.get("audience reception"));
-                String movieOrShow = record.get("movie or show");
                 String genre = record.get("genre");
                 String keywords = record.get("keywords");
                 int yrMade = Integer.parseInt(record.get("year made"));
@@ -62,7 +61,7 @@ public class FilmDataImporter {
                 ArrayList<String> castList = new ArrayList<String>(Arrays.asList(cast.split("|")));
 
 
-                Film newFilm = new Film(title, rating, length, critRec, audRec, movieOrShow,
+                Film newFilm = new Film(title, rating, length, critRec, audRec,
                         genre, keywordsArray, yrMade, yrAcc, castList);
 
                 filmDao.save(newFilm);

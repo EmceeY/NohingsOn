@@ -30,8 +30,6 @@ public class Film {
 
     private int receptionAudience;
 
-    private String movieOrShow;
-
     private String genre;
 
     private ArrayList<String> keywords;
@@ -42,7 +40,7 @@ public class Film {
 
     private ArrayList<String> cast;
 
-    public Film(String name, String mpaaRating, String length, int receptionCritical, int receptionAudience, String movieOrShow,
+    public Film(String name, String mpaaRating, String length, int receptionCritical, int receptionAudience,
                 String genre, ArrayList<String> keywords, int yearMade, int availableDate, ArrayList<String> cast){
 
         this.name = name;
@@ -50,7 +48,6 @@ public class Film {
         this.length = length;
         this.receptionCritical = receptionCritical;
         this.receptionAudience = receptionAudience;
-        this.movieOrShow = movieOrShow;
         this.genre = genre;
         this.keywords = keywords;
         this.yearMade = yearMade;
@@ -103,14 +100,6 @@ public class Film {
 
     public void setReceptionAudience(int receptionAudience) {
         this.receptionAudience = receptionAudience;
-    }
-
-    public String getMovieOrShow() {
-        return movieOrShow;
-    }
-
-    public void setMovieOrShow(String movieOrShow) {
-        this.movieOrShow = movieOrShow;
     }
 
     public String getGenre() {
