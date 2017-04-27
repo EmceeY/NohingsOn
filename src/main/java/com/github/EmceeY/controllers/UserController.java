@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -42,6 +43,14 @@ public class UserController {
         }
         userDao.save(user);
         return "redirect:view/" + user.getId();
+    }
+
+    @RequestMapping(value="view/{userId}", method=RequestMethod.GET)
+    public String viewUser(Model model, @PathVariable int userId){
+        User user =  userDao.findOne(userId);
+        model.addAttribute("user", user);
+        model.addAttribute("userId", user.getId());
+        return "user/view";
     }
 
     @RequestMapping(value="login", method = RequestMethod.GET)
