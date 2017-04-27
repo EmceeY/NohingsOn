@@ -18,99 +18,86 @@ public class Film {
     private int id;
 
     @NotNull
-    private String name;
+    private String title;
 
-    @NotNull
-    private String mpaaRating;
+    private String year;
 
-    @NotNull
-    private String length;
-
-    private int receptionCritical;
-
-    private int receptionAudience;
-
-    private String movieOrShow;
+    private String type;
 
     private String genre;
 
-    private ArrayList<String> keywords;
+    private String actors;
 
-    private int yearMade;
+    private String imdbRating;
 
-    private int availableDate;
+    private String netflixRating;
 
-    private ArrayList<String> cast;
+    private String length;
 
-    public Film(String name, String mpaaRating, String length, int receptionCritical, int receptionAudience, String movieOrShow,
-                String genre, ArrayList<String> keywords, int yearMade, int availableDate, ArrayList<String> cast){
+    private String poster;
 
-        this.name = name;
-        this.mpaaRating = mpaaRating;
-        this.length = length;
-        this.receptionCritical = receptionCritical;
-        this.receptionAudience = receptionAudience;
-        this.movieOrShow = movieOrShow;
+    private String description;
+
+
+    public Film(String title, String year, String type, String genre, String imdbRating,
+                String netflixRating, String poster, String description) {
+
+        this.title = title;
+        this.year = year;
+        this.type = type;
         this.genre = genre;
-        this.keywords = keywords;
-        this.yearMade = yearMade;
-        this.availableDate = availableDate;
-        this.cast = cast;
-
+        this.imdbRating = imdbRating;
+        this.netflixRating = netflixRating;
+        this.poster = poster;
+        this.description = description;
     }
 
-    public Film(){ }
+
+    public Film(String title, String year, String type, String genre, String actors, String imdbRating,
+                String netflixRating, String length, String poster, String description) {
+
+            this.title = title;
+            this.year = year;
+            this.type = type;
+            this.genre = genre;
+            this.actors = actors;
+            this.imdbRating = imdbRating;
+            this.netflixRating = netflixRating;
+            this.length = length;
+            this.poster = poster;
+            this.description = description;
+
+        }
+
+    public Film() {}
+
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getMpaaRating() {
-        return mpaaRating;
+    public String getYear() {
+        return year;
     }
 
-    public void setMpaaRating(String mpaaRating) {
-        this.mpaaRating = mpaaRating;
+    public void setYear(String year) {
+        this.year = year;
     }
 
-    public String getLength() {
-        return length;
+    public String getType() {
+        return type;
     }
 
-    public void setLength(String length) {
-        this.length = length;
-    }
-
-    public int getReceptionCritical() {
-        return receptionCritical;
-    }
-
-    public void setReceptionCritical(int receptionCritical) {
-        this.receptionCritical = receptionCritical;
-    }
-
-    public int getReceptionAudience() {
-        return receptionAudience;
-    }
-
-    public void setReceptionAudience(int receptionAudience) {
-        this.receptionAudience = receptionAudience;
-    }
-
-    public String getMovieOrShow() {
-        return movieOrShow;
-    }
-
-    public void setMovieOrShow(String movieOrShow) {
-        this.movieOrShow = movieOrShow;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getGenre() {
@@ -121,35 +108,51 @@ public class Film {
         this.genre = genre;
     }
 
-    public ArrayList<String> getKeywords() {
-        return keywords;
+    public String getActors() {
+        return actors;
     }
 
-    public void setKeywords(ArrayList<String> keywords) {
-        this.keywords = keywords;
+    public void setActors(String actors) {
+        this.actors = actors;
     }
 
-    public int getYearMade() {
-        return yearMade;
+    public String getImdbRating() {
+        return imdbRating;
     }
 
-    public void setYearMade(int yearMade) {
-        this.yearMade = yearMade;
+    public void setImdbRating(String imdbRating) {
+        this.imdbRating = imdbRating;
     }
 
-    public int getAvailableDate() {
-        return availableDate;
+    public String getNetflixRating() {
+        return netflixRating;
     }
 
-    public void setAvailableDate(int availableDate) {
-        this.availableDate = availableDate;
+    public void setNetflixRating(String netflixRating) {
+        this.netflixRating = netflixRating;
     }
 
-    public ArrayList<String> getCast() {
-        return cast;
+    public String getLength() {
+        return length;
     }
 
-    public void setCast(ArrayList<String> cast) {
-        this.cast = cast;
+    public void setLength(String length) {
+        this.length = length;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
